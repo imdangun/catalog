@@ -39,8 +39,8 @@ jobs:
                 chmod +x gradlew
                 ./gradlew build
     package:
-        name: package and Publish
-        if: ${{github.ref == 'refs/heads/main'}}
+        name: Package and Publish
+        if: ${{github.ref == 'refs/heads/master'}}
         needs: [build]
         runs-on: ubuntu-latest
         permissions:
